@@ -14,7 +14,8 @@ namespace HaushaltsbuchTest
     [DeploymentItem("TestDocuments\\ComparisonXmlDocument.xml", "XmlFileEditorTest")]
     [DeploymentItem("TestDocuments\\EmptyXmlDocument.xml", "XmlFileEditorTest")]
     [DeploymentItem("TestDocuments\\SampleXmlDocumentForDeletion.xml", "XmlFileEditorTest")]
-    public class XmlFileEditorTest
+    [Obsolete("Zwecks Entkopplung des Datenzugriffs abgelöst durch " + nameof(XmlFileTransactionDataAccessObject), true)]
+	public class XmlFileEditorTest
     {
         #region Felder
 

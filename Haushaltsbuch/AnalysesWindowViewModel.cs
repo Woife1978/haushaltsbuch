@@ -30,7 +30,7 @@ namespace Haushaltsbuch
         /// <summary>
         /// Schnittstelle, die Funktionen zum Lesen aus XML-Datei anbietet.
         /// </summary>
-        private readonly IXmlFileReader xmlFileReader = new XmlFileReader();
+        private readonly ITransactionDataAccessObject transactionDataAccessObject;
 
         /// <summary>
         /// Schnittstelle, die Funktionen zum Berechnen von Diagrammdaten anbietet.
@@ -342,6 +342,7 @@ namespace Haushaltsbuch
         public AnalysesWindowViewModel(string month, string year, string fileName)
         {
             this.fileName = fileName;
+            transactionDataAccessObject = new XmlFileTransactionDataAccessObject(this.fileName);
 
             Months = dataCalculator.GetMonths();
             SelectedMonth = month;
@@ -376,7 +377,7 @@ namespace Haushaltsbuch
                 SelectedYear,
                 string.Empty,
                 string.Empty);
-            Transaction[] transactions = xmlFileReader.GetTransactions(fileName, filter);
+            Transaction[] transactions = transactionDataAccessObject.GetTransactions( filter);
 
             CalculateChartDatas(transactions);
             CaluclateChartTexts(transactions);

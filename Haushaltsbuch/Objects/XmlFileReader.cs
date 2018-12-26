@@ -7,10 +7,12 @@ using Haushaltsbuch.Interfaces;
 
 namespace Haushaltsbuch.Objects
 {
-    /// <summary>
-    /// Klasse, die Schnittstelle zum Lesen aus XML-Datei implementiert.
-    /// </summary>
-    public class XmlFileReader : IXmlFileReader
+	/// <summary>
+	/// Klasse, die Schnittstelle zum Lesen aus XML-Datei implementiert.
+	/// </summary>
+
+	[Obsolete("Zwecks Entkopplung des Datenzugriffs abgelöst durch "+nameof(XmlFileTransactionDataAccessObject),true)]
+	public class XmlFileReader : IXmlFileReader
     {
         /// <summary>
         /// Liest Kategorien aller Einträge aus XML-Datei.

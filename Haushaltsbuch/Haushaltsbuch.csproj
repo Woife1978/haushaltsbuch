@@ -94,6 +94,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="InfoWindowViewModel.cs" />
     <Compile Include="Interfaces\IChartDataCalculator.cs" />
+    <Compile Include="Interfaces\ITransactionDataAccessObject.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Objects\ChartData.cs" />
     <Compile Include="Objects\ChartDataCalculator.cs" />
@@ -108,8 +109,8 @@
     <Compile Include="Interfaces\IDataCalculator.cs" />
     <Compile Include="Interfaces\IXmlFileEditor.cs" />
     <Compile Include="Objects\Helper.cs" />
-    <Compile Include="Objects\XmlFileEditor.cs" />
     <Compile Include="Objects\Transaction.cs" />
+    <Compile Include="Objects\XmlFileEditor.cs" />
     <Compile Include="Objects\XmlFileReader.cs" />
     <Compile Include="RelayCommand.cs">
       <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
@@ -119,6 +120,7 @@
     </Compile>
     <Compile Include="SearchWindowViewModel.cs" />
     <Compile Include="TransactionWindowViewModel.cs" />
+    <Compile Include="Objects\XmlFileTransactionDataAccessObject.cs" />
     <Page Include="AnalysesDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
